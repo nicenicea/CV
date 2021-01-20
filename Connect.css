@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.body_cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+/* 里面align-items是垂直的位置*/
+/* justify-content是水平的位置*/
+
+.container{
+    display: flex;
+}
+
+.container .btn{
+    overflow: hidden;
+/* overflow: hidden;是隐藏 */
+    position: relative;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1) ;
+}
+
+.container .fa{
+    font-size: 38px;
+    transform: scale(0.8);
+    line-height: 90px;
+    transition: all 0.4s cubic-bezier(0.31, -0.1, 0.43, 1.59);
+}
+
+.container .btn::before{
+    content: "";
+    position: absolute;
+    top: 90%;
+    left: -100%;
+    width: 120%;
+    height: 120%;
+    transform: rotate(45deg);
+    transition: all 0.4s cubic-bezier(0.31, -0.1, 0.43, 1.59);
+}
+
+.container .btn .fa-facebook{
+    color: #3b5988;
+}
+
+.container .btn_facebook::before{
+    background-color: #3b5988;
+}
+
+.container .btn .fa-linkedin{
+    color: #00aff0;
+}
+
+.container .btn_linkedin::before{
+    background-color: #00aff0;
+}
+
+.container .btn .fa-google{
+    color: #dc4a38;
+}
+
+.container .btn_google::before{
+    background-color: #dc4a38;
+}
+
+.container .btn .fa-instagram{
+    color: #bf00ff;
+}
+
+.container .btn_instagram::before{
+    background-color: #bf00ff;
+}
+
+.container .btn .fa-qq{
+    color: #0066ff;
+}
+
+.container .btn_qq::before{
+    background-color: #0066ff;
+}
+
+.container .btn .fa-wechat{
+    color: #00cc00;
+}
+
+.container .btn_wechat::before{
+    background-color: #00cc00;
+}
+
+.container .btn:hover::before{
+    top: -10%;
+    left: -10%;
+}
+
+.container .btn:hover .fa{
+    color: #fff;
+    transform: scale(1);
+}
+
+.background{
+    background-image: url(./img/IMG_7241\ 2.JPG);
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
